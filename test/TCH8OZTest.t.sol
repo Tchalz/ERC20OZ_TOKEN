@@ -82,7 +82,7 @@ contract TCH80ZTest is Test {
         assertEq(newTCH08.totalSupply(), amountToMint - 1000);
     }
 
-        function testMintRevertsIfNotProtocol() public {
+    function testMintRevertsIfNotProtocol() public {
         // chibuzor is not the protocol, so this call should revert
         vm.prank(chibuzor);
         vm.expectRevert(TCH8OZ.onlyProtocolAddressError.selector);

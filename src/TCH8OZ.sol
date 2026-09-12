@@ -18,11 +18,7 @@ contract TCH8OZ is ERC20 {
         _;
     }
 
-    constructor(
-        string memory _name,
-        string memory _symbol,
-        address _protocol
-    ) ERC20(_name, _symbol) {
+    constructor(string memory _name, string memory _symbol, address _protocol) ERC20(_name, _symbol) {
         if (_protocol == address(0)) revert protocolCannotBeZeroAddress();
         T_name = _name;
         T_symbol = _symbol;
